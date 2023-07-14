@@ -19,7 +19,7 @@ def get_power_consumption(app_name):
   
   print("------------------------------------------------------------------------")
 
-  while duration < 5:
+  while duration < 15:
     # get the CPU power consumption of the application (Revit2023)
     cpu_counts = p.cpu_count()
     process_infomation = p.Process(pid)
@@ -27,14 +27,14 @@ def get_power_consumption(app_name):
     # the cpu percent that the application is using 
     cpu_percent = process_infomation.cpu_percent(1)
 
-    # calculation for power usages
-    power_usage = (p.cpu_freq().current * cpu_percent) / (cpu_counts * 100)
+    # calculation for power consumption
+    power_consumption = (p.cpu_freq().current * cpu_percent) / (cpu_counts * 100)
 
     # display the power consumption of the app
-    print(f"The Power consumption of {app_name}: {power_usage:.2f} W.")
+    print(f"The Power consumption of {app_name}: {power_consumption:.2f} W.")
 
     # add current power usage to data array
-    data.append(power_usage)
+    data.append(power_consumption)
 
     t.sleep(2)
     duration += 1 

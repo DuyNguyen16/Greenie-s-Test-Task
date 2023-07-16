@@ -41,7 +41,8 @@ def get_power_consumption(app_name):
   
   result = sum(data) / duration
 
-  print(f"The average Power consumption of this run for {app_name} is: {result:.2f} W.")
+  print(f"The Average Power consumption of this run for {app_name} is: {result:.2f} W.")
+  print(f"The Total Power consumption of this run for {app_name} is: {sum(data):.2f} W.")
   print("------------------------------------------------------------------------")
 
 

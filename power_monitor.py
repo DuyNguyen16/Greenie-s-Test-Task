@@ -20,7 +20,7 @@ def get_power_consumption(app_name):
   print("------------------------------------------------------------------------")
 
   while duration < 15:
-    # get the CPU power consumption of the application (Revit2023)
+    # get the CPU power consumption of the application
     cpu_counts = p.cpu_count()
     process_infomation = p.Process(pid)
 

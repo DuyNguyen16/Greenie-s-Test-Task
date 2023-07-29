@@ -1,5 +1,3 @@
-# Greenie-s-Test-Task
-
 # Power Consumption Monitor for Application
 
 This Python script allows you to monitor the power consumption of a specific application running on your system. It uses the `psutil` library to gather CPU usage data and calculates the power consumption based on CPU frequency and usage percentage.
